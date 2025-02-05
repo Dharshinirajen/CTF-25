@@ -1,0 +1,160 @@
+import React from "react";
+import {
+    FooterContainer,
+    FooterLinkItems,
+    FooterLinksContainer,
+    FooterLinksWrapper,
+    FooterLinkTitle,
+    FooterRedirectLink,
+    FooterRouterLink,
+    FooterScrollLink,
+    // FooterSocialLinksDiscord,
+    // FooterSocialLinksGithub,
+    // FooterSocialLinksLinktree,
+    // FooterSocialLinksTwitter,
+    FooterWrap,
+    SocialIconLinkDiscord,
+    SocialIconLinkGithub,
+    SocialIconLinkInstagram,
+    SocialIconLinkTwitter,
+    SocialIconLinkYoutube,
+    SocialIcons,
+    SocialLogo,
+    SocialMedia,
+    SocialMediaWrap,
+    WebsiteRights,
+} from "./FooterElements";
+
+import { FaDiscord, FaGithub, FaInstagram, FaLinkedin, FaTelegram, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { animateScroll as scroll } from "react-scroll";
+
+const SocialLinks = {
+    github: "https://www.github.com/th3cyb3rhub",
+    instagram: "https://www.instagram.com/th3cyb3rhub",
+    twitter: "https://www.twitter.com/th3cyb3rhub",
+    discord: "https://discord.com/invite/thecyberhub-799183504759324672",
+    telegram: "https://t.me/th3cyb3rhub",
+    linktree: "https://linktr.ee/th3cyb3rhub",
+    youtube: "https://www.youtube.com/@th3cyb3rhub",
+    linkedin: "https://linkedin.com/company/th3cyb3rhub",
+};
+
+const toggleHome = () => {
+    scroll.scrollToTop();
+};
+
+const Footer = () => {
+    return (
+        <FooterContainer>
+            <FooterWrap>
+                <FooterLinksContainer>
+                    <FooterLinksWrapper>
+                        <FooterLinkItems>
+                            <FooterLinkTitle>About Us</FooterLinkTitle>
+                            {[
+                                { to: "about", title: "About" },
+                                { to: "services", title: "Services" },
+                                { to: "community", title: "Community" },
+                                { to: "contribute", title: "Contribute" },
+                            ].map(({ to, title }) => (
+                                <FooterScrollLink
+                                    href={`/${to}`}
+                                    key={to}
+                                    to={to}
+                                    smooth={true}
+                                    duration={500}
+                                    spy={true}
+                                    exact="true"
+                                    offset={-80}
+                                >
+                                    {title}
+                                </FooterScrollLink>
+                            ))}
+                            <FooterRouterLink to={"terms-conditions"}>Terms & Conditions</FooterRouterLink>
+                            <FooterRouterLink to={"privacy-policy"}>Privacy Policy</FooterRouterLink>
+                        </FooterLinkItems>
+                        <FooterLinkItems>
+                            <FooterLinkTitle>Community</FooterLinkTitle>
+                            <FooterRouterLink to="/explore">Explore</FooterRouterLink>
+                            <FooterRouterLink to="/feeds">Feeds</FooterRouterLink>
+                            <FooterRouterLink to="/blogs">Blogs</FooterRouterLink>
+                            <FooterRouterLink to="/ctf">CTF</FooterRouterLink>
+                        </FooterLinkItems>
+
+                        <FooterLinkItems>
+                            <FooterLinkTitle>Opportunities</FooterLinkTitle>
+                            <FooterRouterLink to="/internship">Internships</FooterRouterLink>
+                            <FooterRouterLink to="/community-events">Community Events</FooterRouterLink>
+                            <FooterRouterLink to="/opensec-projects">OpenSec Projects</FooterRouterLink>
+                        </FooterLinkItems>
+
+                        <FooterLinkItems>
+                            <FooterLinkTitle>Contact Us</FooterLinkTitle>
+                            <FooterRouterLink to="/contact">Contact</FooterRouterLink>
+                            <FooterRouterLink to="/contact">Feedback</FooterRouterLink>
+                            <FooterRouterLink to="/community">Community</FooterRouterLink>
+                            <FooterRouterLink to="/support">Support</FooterRouterLink>
+                        </FooterLinkItems>
+
+                        <FooterLinkItems>
+                            <FooterLinkTitle> Videos </FooterLinkTitle>
+                            <FooterRedirectLink href={SocialLinks.youtube} target={"_blank"}>
+                                About Community
+                            </FooterRedirectLink>
+                            <FooterRedirectLink href={SocialLinks.youtube} target={"_blank"}>
+                                How to Join Community
+                            </FooterRedirectLink>
+                            <FooterRedirectLink href={SocialLinks.youtube} target={"_blank"}>
+                                How to Contribute to the Community
+                            </FooterRedirectLink>
+                        </FooterLinkItems>
+                        <FooterLinkItems>
+                            <FooterLinkTitle>Security</FooterLinkTitle>
+                            <FooterRouterLink to="/security"> Security </FooterRouterLink>
+                            <FooterRouterLink to="/security/rules-of-engagement">Rules of Engagement</FooterRouterLink>
+                            <FooterRouterLink to="/security/hall-of-fame"> Hall of Fame </FooterRouterLink>
+                        </FooterLinkItems>
+                    </FooterLinksWrapper>
+                </FooterLinksContainer>
+                <SocialMedia>
+                    <SocialMediaWrap>
+                        <SocialLogo to="/" onClick={toggleHome}>
+                            TheCyberHUB
+                        </SocialLogo>
+                        <WebsiteRights> © {new Date().getFullYear()} All rights reserved.</WebsiteRights>
+                        <SocialIcons>
+                            <SocialIconLinkYoutube href={SocialLinks.youtube} target="_blank" aria-label="YouTube">
+                                <FaYoutube />
+                            </SocialIconLinkYoutube>
+                            <SocialIconLinkTwitter href={SocialLinks.linkedin} target="_blank" aria-label="Linkedin">
+                                <FaLinkedin />
+                            </SocialIconLinkTwitter>
+                            <SocialIconLinkDiscord href={SocialLinks.discord} target="_blank" aria-label="Discord">
+                                <FaDiscord />
+                            </SocialIconLinkDiscord>
+                            <SocialIconLinkTwitter href={SocialLinks.telegram} target="_blank" aria-label="Telegram">
+                                <FaTelegram />
+                            </SocialIconLinkTwitter>
+                            <SocialIconLinkGithub href={SocialLinks.github} target="_blank" aria-label="Github">
+                                <FaGithub />
+                            </SocialIconLinkGithub>
+                            <SocialIconLinkTwitter href={SocialLinks.twitter} target="_blank" aria-label="Twitter">
+                                <FaXTwitter />
+                            </SocialIconLinkTwitter>
+                            <SocialIconLinkInstagram
+                                href={SocialLinks.instagram}
+                                target="_blank"
+                                aria-label="Instagram"
+                            >
+                                <FaInstagram />
+                            </SocialIconLinkInstagram>
+                        </SocialIcons>
+                    </SocialMediaWrap>
+                </SocialMedia>
+            </FooterWrap>
+        </FooterContainer>
+    );
+};
+
+export default Footer;
