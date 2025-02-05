@@ -48,7 +48,7 @@ const Footer = () => {
     return (
         <FooterContainer>
             <FooterWrap>
-                <FooterLinksContainer>
+                {/* <FooterLinksContainer>
                     <FooterLinksWrapper>
                         <FooterLinkItems>
                             <FooterLinkTitle>About Us</FooterLinkTitle>
@@ -116,8 +116,8 @@ const Footer = () => {
                             <FooterRouterLink to="/security/hall-of-fame"> Hall of Fame </FooterRouterLink>
                         </FooterLinkItems>
                     </FooterLinksWrapper>
-                </FooterLinksContainer>
-                <SocialMedia>
+                </FooterLinksContainer> */}
+                {/* <SocialMedia>
                     <SocialMediaWrap>
                         <SocialLogo to="/" onClick={toggleHome}>
                             TheCyberHUB
@@ -151,7 +151,7 @@ const Footer = () => {
                             </SocialIconLinkInstagram>
                         </SocialIcons>
                     </SocialMediaWrap>
-                </SocialMedia>
+                </SocialMedia> */}
             </FooterWrap>
         </FooterContainer>
     );

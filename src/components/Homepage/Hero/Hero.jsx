@@ -31,7 +31,7 @@ const Hero = () => {
                 </VideoBg>
             </HeroBg>
             <HeroContent>
-                <HeroH1>Empowering Cybersecurity Enthusiasts</HeroH1>
+                <HeroH1>Welcome to Capture The Flag </HeroH1>
                 <HeroP>Join a thriving community and unlock the limitless potential of cybersecurity.</HeroP>
 
                 <HeroBtnWrapper>

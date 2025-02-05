@@ -76,35 +76,35 @@ const Navbar = ({ isOpen, toggle }) => {
                 <NavMenu>
                     {[
                         { to: "explore", title: "Explore", dropdown: "explore" },
-                        { to: "feeds", title: "Feeds", dropdown: "feeds" },
-                        { to: "blogs", title: "Blogs", dropdown: "blogs" },
-                        { to: "aiChat", title: "AI ", dropdown: "aiChat" },
+                        // { to: "feeds", title: "Feeds", dropdown: "feeds" },
+                        // { to: "blogs", title: "Blogs", dropdown: "blogs" },
+                        // { to: "aiChat", title: "AI ", dropdown: "aiChat" },
                         // { to: "ctf", title: "CTF", dropdown: "ctf" },
-                        { to: "websecurity", title: "Web Security", dropdown: "websecurity" },
-                        {
-                            title: (
-                                <>
-                                    <p onClick={() => onClickResources()}>Resources</p>
-                                    <DropdownIcon
-                                        onClick={() => onClickResources()}
-                                        clicked={resourcesClick && toggleDropdown ? "rotate(270deg)" : undefined}
-                                    />
-                                </>
-                            ),
-                            dropdown: "resources",
-                        },
-                        {
-                            title: (
-                                <>
-                                    <p onClick={() => onClickOpportunities()}>Opportunities</p>
-                                    <DropdownIcon
-                                        onClick={() => onClickOpportunities()}
-                                        clicked={opportunities && toggleDropdown ? "rotate(270deg)" : undefined}
-                                    />
-                                </>
-                            ),
-                            dropdown: "programs",
-                        },
+                        // { to: "websecurity", title: "Web Security", dropdown: "websecurity" },
+                        // {
+                        //     title: (
+                        //         <>
+                        //             <p onClick={() => onClickResources()}>Resources</p>
+                        //             <DropdownIcon
+                        //                 onClick={() => onClickResources()}
+                        //                 clicked={resourcesClick && toggleDropdown ? "rotate(270deg)" : undefined}
+                        //             />
+                        //         </>
+                        //     ),
+                        //     dropdown: "resources",
+                        // },
+                        // {
+                        //     title: (
+                        //         <>
+                        //             <p onClick={() => onClickOpportunities()}>Opportunities</p>
+                        //             <DropdownIcon
+                        //                 onClick={() => onClickOpportunities()}
+                        //                 clicked={opportunities && toggleDropdown ? "rotate(270deg)" : undefined}
+                        //             />
+                        //         </>
+                        //     ),
+                        //     dropdown: "programs",
+                        // },
                     ].map(({ to, title, dropdown }) => (
                         <NavItem
                             onMouseEnter={() => dropHandler(dropdown)}

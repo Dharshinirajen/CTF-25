@@ -7,7 +7,7 @@ export const FooterContainer = styled.footer`
     background: #030303;
     margin-top: auto;
     width: 100%;
-    padding: 100px;
+    padding: 0px;
 
     @media screen and (width <= 600px) {
         padding: 24px;

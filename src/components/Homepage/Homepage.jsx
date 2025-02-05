@@ -7,14 +7,14 @@ const Homepage = () => {
     return (
         <>
             <Hero />
-            <Info {...aboutData} />
-            <Info {...desktopAppDownloadData} />
-            <Info {...ResourcesData} />
-            <Info {...contributeData} />
-            <Info {...communityData} />
-            <Socials />
+            {/* <Info {...aboutData} /> */}
+            {/* <Info {...desktopAppDownloadData} /> */}
+            {/* <Info {...ResourcesData} /> */}
+            {/* <Info {...contributeData} /> */}
+            {/* <Info {...communityData} /> */}
+            {/* <Socials /> */}
             {/* <SpecialSponsors /> */}
-            <ContactForm />
+            {/* <ContactForm /> */}
         </>
     );
 };
