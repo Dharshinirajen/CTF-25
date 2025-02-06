@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import Dropdown from "src/components/Header/Dropdowns/Dropdown";
-import { DropdownIcon } from "src/components/Header/Navbar/NavbarElements";
+// import Dropdown from "src/components/Header/Dropdowns/Dropdown";
+// import { DropdownIcon } from "src/components/Header/Navbar/NavbarElements";
 
 import {
     SidebarContainer,
     Icon,
     CloseIcon,
-    SidebarWrapper,
-    SidebarLink,
-    SidebarMenu,
-    SidebarNavItem,
+    // SidebarWrapper,
+    // SidebarLink,
+    // SidebarMenu,
+    // SidebarNavItem,
 } from "./SidebarElements";
 
 const Sidebar = (props) => {
@@ -60,7 +60,7 @@ const Sidebar = (props) => {
                 <Icon onClick={toggle}>
                     <CloseIcon onClick={setDropHandler} />
                 </Icon>
-                <SidebarWrapper>
+                {/* <SidebarWrapper>
                     <SidebarMenu>
                         {[
                             { to: "explore", title: "Explore", dropdown: "explore" },
@@ -121,7 +121,7 @@ const Sidebar = (props) => {
                             </div>
                         ))}
                     </SidebarMenu>
-                </SidebarWrapper>
+                </SidebarWrapper> */}
             </SidebarContainer>
         )
     );

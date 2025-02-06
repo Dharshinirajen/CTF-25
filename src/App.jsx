@@ -62,6 +62,7 @@ import ResetPassword from "src/pages/ResetPassword";
 import Register from "src/pages/Register";
 import ResourcesRoutes from "src/components/Resources/ResourcesRoutes.jsx";
 
+
 const App = () => {
     const { user } = useSelector((state) => state.auth);
 

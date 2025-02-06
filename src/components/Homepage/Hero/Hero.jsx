@@ -32,10 +32,10 @@ const Hero = () => {
             </HeroBg>
             <HeroContent>
                 <HeroH1>Welcome to Capture The Flag </HeroH1>
-                <HeroP>Join a thriving community and unlock the limitless potential of cybersecurity.</HeroP>
+                <HeroP>“Technology trust is a good thing, <br/>but control is a better one.”</HeroP>
 
                 <HeroBtnWrapper>
-                    <ScrollButton
+                    {/* <ScrollButton
                         href="/about"
                         to="about"
                         onMouseEnter={onHover}
@@ -49,7 +49,7 @@ const Hero = () => {
                         offset={-80}
                     >
                         Get Started {hover ? <ArrowRight /> : <ArrowForward />}
-                    </ScrollButton>
+                    </ScrollButton> */}
                 </HeroBtnWrapper>
             </HeroContent>
         </HeroContainer>

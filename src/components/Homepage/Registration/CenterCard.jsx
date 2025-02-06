@@ -8,7 +8,7 @@ export const Container = styled.div`
     width: 100%;
     background: black;
     overflow: auto;
-    padding: 50px;
+    padding: 100px;
 
     @media screen and (width <= 600px) {
         /* padding: 10px; */
@@ -21,19 +21,18 @@ export const Container = styled.div`
 
     `
             : `
-    height: 100vh;
+    height: 110vh;
   `};
 `;
 
 export const CenterCard = styled.div`
-    /* min-width: max-content; */
     margin: auto;
     height: 100%;
     background: #1a1c20;
-
-    /* width: 1124px; */
+    width: 90%; // Increase the width to cover more area
+    max-width: 1200px; // Set a maximum width to prevent it from becoming too wide
     box-shadow: rgb(0 0 0 / 11%) 1px 7px 16px 5px;
-    border-radius: 7px;
+    border-radius: 20px;
     background-image: url(${CybersecurityRegImage});
     background-size: cover;
     background-position: 45%;
@@ -43,19 +42,18 @@ export const CenterCard = styled.div`
     ${(props) =>
         props.$authPopup
             ? `
-
-    `
+            `
             : `
-    display: grid;
-    grid-template-columns: 1fr 1.4fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "left right";
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: "left right";
 
-    @media (max-width: 850px) {
-        grid-template-columns: 1fr;
-        grid-template-rows: 0.3fr 1fr;
-        grid-template-areas: "left" "right";
-        width: 100%;
-    }
-  `};
+            @media (max-width: 850px) {
+                grid-template-columns: 1fr;
+                grid-template-rows: 0.3fr 1fr;
+                grid-template-areas: "left" "right";
+                width: 100%;
+            }
+            `};
 `;
